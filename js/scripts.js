@@ -13,12 +13,17 @@ $(document).ready(function() {
     var food = $("input#new-place-food").val();
     var newPlace = new Place (locale, year, food);
 
-      $("ul#visited").append(("<li class='placeVisited'><span class='place'>") + newPlace.locale + ("</span></li>"));
+    $("ul#visited").append(("<li class='placeVisited'><span class='place'>") + newPlace.locale + ("</span></li>"));
 
-      $("li.placeVisited").append(("<ul id='show-details'><li>") + newPlace.year + ("</li></ul>"));
+    $("li.placeVisited").append(("<ul id='show-details'><li>") + newPlace.year + ("</li></ul>"));
 
-      $("input#new-place-locale").val("");
-      $("input#new-place-year").val("");
-      $("input#new-place-food").val("");
+    $("input#new-place-locale").val("");
+    $("input#new-place-year").val("");
+    $("input#new-place-food").val("");
+
+    $(".place").click(function() {
+      $("#show-details").show();
+    })
+
   });
 });
