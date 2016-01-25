@@ -15,14 +15,15 @@ $(document).ready(function() {
 
     $("ul#visited").append(("<li class='placeVisited'><span class='place'>") + newPlace.locale + ("</span></li>"));
 
-    $("li.placeVisited").append(("<ul id='show-details'><li>") + newPlace.year + ("</li></ul>"));
+    $("li.placeVisited").last().append(("<ul class='show-details'><li>") + newPlace.year + ("</li></ul>"));
 
     $("input#new-place-locale").val("");
     $("input#new-place-year").val("");
     $("input#new-place-food").val("");
 
-    $(".place").click(function() {
-      $("#show-details").show();
+    $(".placeVisited").click(function() {
+      $(this).find(".show-details").toggle();
+      return false;
     })
 
   });
