@@ -5,4 +5,5 @@ describe("Place", function() {
     expect(testPlace.year).to.equal("2013");
     expect(testPlace.food).to.equal("plantains");
   });
+
 });
