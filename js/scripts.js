@@ -21,10 +21,10 @@ $(document).ready(function() {
     $("input#new-place-year").val("");
     $("input#new-place-food").val("");
 
-    $(".placeVisited").click(function() {
+    $(".placeVisited").last().click(function() {
       $(this).find(".show-details").toggle();
       return false;
-    })
+    });
 
   });
 });
