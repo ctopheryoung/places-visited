@@ -15,7 +15,9 @@ $(document).ready(function() {
 
     $("ul#visited").append(("<li class='placeVisited'><span class='place'>") + newPlace.locale + ("</span></li>"));
 
-    $("li.placeVisited").last().append(("<ul class='show-details'><li>") + newPlace.year + ("</li></ul>"));
+    $("li.placeVisited").last().append(("<ul class='show-details'>") + ("<li>") + newPlace.year + ("</li>") + ("<li>") + newPlace.food + ("</li>") + ("</ul>"));
+
+      // $("li.placeVisited").last().append(("<ul class='show-details'><li>") + newPlace.food + ("</li></ul>"));
 
     $("input#new-place-locale").val("");
     $("input#new-place-year").val("");
